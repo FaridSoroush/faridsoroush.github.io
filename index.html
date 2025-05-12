@@ -7,6 +7,27 @@
   <meta name="description" content="Farid Soroush, Ph.D. – AI/ML, Data, and Quantitative Modeling – J.P.MorganChase Vice President – Apple, Stanford, MIT">
   <meta name="robots" content="index, follow">
 
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5DFREEG7C"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-N5DFREEG7C');
+
+    // Track all link clicks
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          gtag('event', 'click', {
+            'event_category': 'outbound',
+            'event_label': link.href
+          });
+        });
+      });
+    });
+  </script>
+
   <!-- Open Graph (for LinkedIn, Slack, Facebook, etc.) -->
   <meta property="og:title" content="Farid Soroush, Ph.D." />
   <meta property="og:description" content="AI/ML, Data, Quantitative Modeling – Portfolio & Resume" />
